@@ -27,6 +27,8 @@ createApp({
         }
     },
     methods : {
-
+        removeActivity : function(i){
+            this.toDoList.splice(i, 1);
+        }
     }
 }).mount('#app')
