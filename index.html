@@ -10,6 +10,10 @@
 </head>
 <body>
     <div id="app">
+        <input type="text" placeholder="Inserisci un'attività" v-model="newActivity">
+        <button @click="pushNewActivity()">
+            <i class="fa-solid fa-check"></i>
+        </button>
         <ul>
             <li v-for="(activity, i) in toDoList">
                 <span v-if="activity.done == false">{{activity.text}}</span>

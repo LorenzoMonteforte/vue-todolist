@@ -23,12 +23,20 @@ createApp({
                     text : "Uluru",
                     done : false
                 }
-            ]
+            ],
+            newActivity : ""
         }
     },
     methods : {
         removeActivity : function(i){
             this.toDoList.splice(i, 1);
+        },
+        pushNewActivity : function(){
+            this.toDoList.push({
+                text : this.newActivity,
+                done : false
+            });
+            this.newActivity = "";
         }
     }
 }).mount('#app')
