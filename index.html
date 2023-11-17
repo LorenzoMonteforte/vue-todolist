@@ -16,8 +16,8 @@
         </button>
         <ul>
             <li v-for="(activity, i) in toDoList">
-                <span v-if="activity.done == false">{{activity.text}}</span>
-                <span v-else class="linTro">{{activity.text}}</span>
+                <span v-if="activity.done == false" @click="convertTrueFalse(i)">{{activity.text}}</span>
+                <span v-else class="linTro" @click="convertTrueFalse(i)">{{activity.text}}</span>
                 <button @click="removeActivity(i)">
                     <i class="fa-solid fa-x"></i>
                 </button>

@@ -37,6 +37,13 @@ createApp({
                 done : false
             });
             this.newActivity = "";
+        },
+        convertTrueFalse : function(i){
+            if(this.toDoList[i].done == true){
+                this.toDoList[i].done = false;
+            }else{
+                this.toDoList[i].done = true;
+            }
         }
     }
 }).mount('#app')
