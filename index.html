@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" placeholder="Inserisci un'attività" v-model="newActivity">
+        <input type="text" placeholder="Inserisci un'attività" v-model="newActivity" @keyup.enter="pushNewActivity()">
         <button @click="pushNewActivity()">
             <i class="fa-solid fa-check"></i>
         </button>
