@@ -10,23 +10,25 @@
 </head>
 <body>
     <div id="app">
-        <h1>Posti da visitare</h1>
-        <div id="newActivityContainer">
-            <input type="text" placeholder="Inserisci un'attività" v-model="newActivity" @keyup.enter="pushNewActivity()">
-            <button @click="pushNewActivity()">
-                <i class="fa-solid fa-check"></i>
-            </button>
-        </div>
-        <div id="listContainer">
-            <ul>
-                <li v-for="(activity, i) in toDoList">
-                    <span v-if="activity.done == false" @click="convertTrueFalse(i)">{{activity.text}}</span>
-                    <span v-else class="linTro" @click="convertTrueFalse(i)">{{activity.text}}</span>
-                    <button @click="removeActivity(i)">
-                        <i class="fa-solid fa-x"></i>
-                    </button>
-                </li>
-            </ul>
+        <div id="container">
+            <h1>Posti da visitare</h1>
+            <div id="newActivityContainer">
+                <input type="text" placeholder="Inserisci un'attività" v-model="newActivity" @keyup.enter="pushNewActivity()">
+                <button @click="pushNewActivity()">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+            <div id="listContainer">
+                <ul>
+                    <li v-for="(activity, i) in toDoList">
+                        <span v-if="activity.done == false" @click="convertTrueFalse(i)">{{activity.text}}</span>
+                        <span v-else class="linTro" @click="convertTrueFalse(i)">{{activity.text}}</span>
+                        <button @click="removeActivity(i)">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="index.js"></script>

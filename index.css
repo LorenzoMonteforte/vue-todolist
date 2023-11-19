@@ -95,8 +95,18 @@ body{
     border-radius: 0.5rem;
 }
 
+#newActivityContainer > button:hover{
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
 #listContainer > ul > li:hover{
     background-color: rgba(1, 1, 1, 0.3);
+}
+
+#listContainer > ul > li > span{
+    cursor: pointer;
 }
 
 #listContainer > ul > li > button:hover{
@@ -104,4 +114,25 @@ body{
     background-color: red;
     border: 2px solid white;
     scale: 1.1;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px){
+    #newActivityContainer > input{
+        width: 100%;
+    }
+
+    #container{
+        padding: 0 3rem;
+    }
+
+    #listContainer > ul{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #container{
+        padding: 0 1rem;
+    }
 }
