@@ -32,11 +32,13 @@ createApp({
             this.toDoList.splice(i, 1);
         },
         pushNewActivity : function(){
-            this.toDoList.push({
-                text : this.newActivity,
-                done : false
-            });
-            this.newActivity = "";
+            if(this.newActivity != ""){
+                this.toDoList.push({
+                    text : this.newActivity,
+                    done : false
+                });
+                this.newActivity = "";
+            }
         },
         convertTrueFalse : function(i){
             if(this.toDoList[i].done == true){
